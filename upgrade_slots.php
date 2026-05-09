@@ -1,6 +1,7 @@
 <?php
 include 'config/db.php';
 
+
 try {
     // Add appointment_duration to doctors table
     $pdo->exec("ALTER TABLE doctors ADD COLUMN appointment_duration INT DEFAULT 30 AFTER consultation_fee");
