@@ -10,6 +10,7 @@ A premium, fully functional **Doctor Appointment Web Application** built with **
 
 ## ✨ Features
 
+
 ### 👤 Public Area
 *   **Modern Landing Page**: Glassmorphism UI with animations.
 *   **Find Doctors**: Search by name or specialization.
