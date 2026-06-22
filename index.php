@@ -161,7 +161,35 @@ include 'includes/header.php';
 </section>
 
 <!-- Specialties Section -->
-<section class="py-5" id="specialties">
+<style>
+.specialty-card-3d {
+    perspective: 1000px;
+    background: transparent;
+}
+.specialty-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.specialty-card-content {
+    transform: translateZ(30px);
+}
+.img-3d-icon {
+    object-fit: cover;
+    filter: drop-shadow(0 10px 15px rgba(13,110,253,0.3));
+    transition: transform 0.3s ease;
+    border-radius: 50%; /* Removes the square 'extra border' look */
+}
+.specialty-card-3d:hover .img-3d-icon {
+    transform: scale(1.1) translateY(-5px);
+}
+</style>
+<section class="py-5 bg-light" id="specialties">
     <div class="container py-5">
         <div class="text-center w-75 mx-auto mb-5">
             <h2 class="fw-bold display-6 mb-3">Our Medical Specialties</h2>
@@ -170,67 +198,130 @@ include 'includes/header.php';
         <div class="row g-4 text-center">
             <div class="col-6 col-md-4 col-lg-2">
                 <a href="specialty.php?type=Cardiology" class="text-decoration-none text-dark">
-                    <div class="card border-0 shadow-sm h-100 py-4 hover-lift">
-                        <div class="text-primary mb-3">
-                            <i class="fas fa-heartbeat fa-3x"></i>
+                    <div class="specialty-card-3d h-100">
+                        <div class="specialty-card-inner py-4">
+                            <div class="specialty-card-content">
+                                <div class="mb-3">
+                                    <img src="assets/images/3d_heart.png" alt="Cardiology" width="90" height="90" class="img-3d-icon">
+                                </div>
+                                <h6 class="fw-bold mb-0">Cardiology</h6>
+                            </div>
                         </div>
-                        <h6 class="fw-bold mb-0">Cardiology</h6>
                     </div>
                 </a>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <a href="specialty.php?type=Neurology" class="text-decoration-none text-dark">
-                    <div class="card border-0 shadow-sm h-100 py-4 hover-lift">
-                        <div class="text-primary mb-3">
-                            <i class="fas fa-brain fa-3x"></i>
+                    <div class="specialty-card-3d h-100">
+                        <div class="specialty-card-inner py-4">
+                            <div class="specialty-card-content">
+                                <div class="mb-3">
+                                    <img src="assets/images/3d_brain.png" alt="Neurology" width="90" height="90" class="img-3d-icon">
+                                </div>
+                                <h6 class="fw-bold mb-0">Neurology</h6>
+                            </div>
                         </div>
-                        <h6 class="fw-bold mb-0">Neurology</h6>
                     </div>
                 </a>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <a href="specialty.php?type=Pediatrics" class="text-decoration-none text-dark">
-                    <div class="card border-0 shadow-sm h-100 py-4 hover-lift">
-                        <div class="text-primary mb-3">
-                            <i class="fas fa-baby fa-3x"></i>
+                    <div class="specialty-card-3d h-100">
+                        <div class="specialty-card-inner py-4">
+                            <div class="specialty-card-content">
+                                <div class="mb-3">
+                                    <img src="assets/images/3d_baby.png" alt="Pediatrics" width="90" height="90" class="img-3d-icon">
+                                </div>
+                                <h6 class="fw-bold mb-0">Pediatrics</h6>
+                            </div>
                         </div>
-                        <h6 class="fw-bold mb-0">Pediatrics</h6>
                     </div>
                 </a>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <a href="specialty.php?type=Dentistry" class="text-decoration-none text-dark">
-                    <div class="card border-0 shadow-sm h-100 py-4 hover-lift">
-                        <div class="text-primary mb-3">
-                            <i class="fas fa-tooth fa-3x"></i>
+                    <div class="specialty-card-3d h-100">
+                        <div class="specialty-card-inner py-4">
+                            <div class="specialty-card-content">
+                                <div class="mb-3">
+                                    <img src="assets/images/3d_tooth.png" alt="Dentistry" width="90" height="90" class="img-3d-icon">
+                                </div>
+                                <h6 class="fw-bold mb-0">Dentistry</h6>
+                            </div>
                         </div>
-                        <h6 class="fw-bold mb-0">Dentistry</h6>
                     </div>
                 </a>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <a href="specialty.php?type=Orthopedics" class="text-decoration-none text-dark">
-                    <div class="card border-0 shadow-sm h-100 py-4 hover-lift">
-                        <div class="text-primary mb-3">
-                            <i class="fas fa-bone fa-3x"></i>
+                    <div class="specialty-card-3d h-100">
+                        <div class="specialty-card-inner py-4">
+                            <div class="specialty-card-content">
+                                <div class="mb-3">
+                                    <img src="assets/images/3d_bone.png" alt="Orthopedics" width="90" height="90" class="img-3d-icon">
+                                </div>
+                                <h6 class="fw-bold mb-0">Orthopedics</h6>
+                            </div>
                         </div>
-                        <h6 class="fw-bold mb-0">Orthopedics</h6>
                     </div>
                 </a>
             </div>
             <div class="col-6 col-md-4 col-lg-2">
                 <a href="specialty.php?type=Optometry" class="text-decoration-none text-dark">
-                    <div class="card border-0 shadow-sm h-100 py-4 hover-lift">
-                        <div class="text-primary mb-3">
-                            <i class="fas fa-eye fa-3x"></i>
+                    <div class="specialty-card-3d h-100">
+                        <div class="specialty-card-inner py-4">
+                            <div class="specialty-card-content">
+                                <div class="mb-3">
+                                    <img src="assets/images/3d_eye.png" alt="Optometry" width="90" height="90" class="img-3d-icon">
+                                </div>
+                                <h6 class="fw-bold mb-0">Optometry</h6>
+                            </div>
                         </div>
-                        <h6 class="fw-bold mb-0">Optometry</h6>
                     </div>
                 </a>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.specialty-card-3d');
+    
+    cards.forEach(card => {
+        const inner = card.querySelector('.specialty-card-inner');
+        
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Calculate rotation based on mouse position (max 15 degrees)
+            const rotateX = ((y - centerY) / centerY) * -15; 
+            const rotateY = ((x - centerX) / centerX) * 15;
+            
+            inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05) translateZ(10px)`;
+            inner.style.transition = 'none'; // remove transition for snappy tracking
+            
+            // Dynamic shadow direction
+            inner.style.boxShadow = `${-rotateY}px ${rotateX}px 30px rgba(13,110,253,0.2)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            inner.style.transform = 'rotateX(0) rotateY(0) scale(1) translateZ(0)';
+            inner.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s';
+            inner.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
+        });
+        
+        card.addEventListener('mouseenter', () => {
+            inner.style.transition = 'transform 0.1s, box-shadow 0.1s';
+        });
+    });
+});
+</script>
 
 <!-- Featured Doctors Section -->
 <section class="py-5 bg-light" id="featured-doctors">
