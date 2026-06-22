@@ -93,12 +93,27 @@ $data = $specialtyData[$specialty];
     display: flex;
     align-items: center;
     color: white;
+    padding-top: 90px; /* Fixes Navbar Overlap */
 }
 .specialty-hero::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: linear-gradient(90deg, rgba(13,110,253,0.9) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+/* Force Navbar Text White Over Dark Hero (Only when at top) */
+.navbar:not(.scrolled) .nav-link,
+.navbar:not(.scrolled) .navbar-brand {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+.navbar:not(.scrolled) .btn-outline-custom {
+    color: white !important;
+    border-color: white !important;
+}
+.navbar:not(.scrolled) .btn-outline-custom:hover {
+    background: white !important;
+    color: var(--primary-color) !important;
 }
 .hero-content {
     position: relative;
@@ -164,15 +179,15 @@ $data = $specialtyData[$specialty];
 </style>
 
 <!-- Specialty Hero Section -->
-<section class="specialty-hero">
-    <div class="container hero-content animate-fade-in">
-        <span class="badge bg-light text-primary mb-3 px-3 py-2 rounded-pill fs-6"><?php echo $safe_specialty; ?></span>
+<section class="specialty-hero text-center d-flex justify-content-center align-items-center">
+    <div class="container hero-content animate-fade-in d-flex flex-column align-items-center justify-content-center">
+        <span class="badge bg-light text-primary mb-3 px-3 py-2 rounded-pill fs-6 shadow-sm"><?php echo $safe_specialty; ?> Department</span>
         <h1 class="display-3 fw-bold mb-3 text-white"><?php echo $data['hero_title']; ?></h1>
-        <p class="lead text-white-50 mb-4" style="max-width: 700px; font-size: 1.25rem;">
+        <p class="lead text-white-50 mb-5" style="max-width: 700px; font-size: 1.25rem;">
             <?php echo $data['hero_desc']; ?>
         </p>
-        <div class="d-flex gap-3">
-            <a href="#specialists" class="btn btn-light btn-lg rounded-pill fw-bold text-primary px-4">View Doctors</a>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#specialists" class="btn btn-light btn-lg rounded-pill fw-bold text-primary px-4 shadow">View Doctors</a>
             <a href="booking.php" class="btn btn-outline-light btn-lg rounded-pill px-4">Book Now</a>
         </div>
     </div>
@@ -232,14 +247,39 @@ $data = $specialtyData[$specialty];
     </div>
     
     <div class="scrolling-wrapper">
-        <?php foreach($data['services'] as $service): ?>
-        <div class="card-3d">
+        <?php foreach($data['services'] as $index => $service): ?>
+        <div class="card-3d" data-bs-toggle="modal" data-bs-target="#serviceModal<?php echo $index; ?>">
             <div class="card-3d-inner">
                 <img src="<?php echo $service['img']; ?>" class="card-3d-img" alt="<?php echo $service['title']; ?>">
                 <div class="card-3d-body">
                     <h5 class="fw-bold text-primary mb-3"><?php echo $service['title']; ?></h5>
                     <p class="text-muted"><?php echo $service['desc']; ?></p>
-                    <a href="#" class="text-decoration-none fw-bold text-dark mt-auto d-inline-block">Learn more <i class="fas fa-arrow-right ms-1 text-primary"></i></a>
+                    <span class="text-decoration-none fw-bold text-dark mt-auto d-inline-block">Learn more <i class="fas fa-arrow-right ms-1 text-primary"></i></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal for this service -->
+        <div class="modal fade" id="serviceModal<?php echo $index; ?>" tabindex="-1" aria-hidden="true" style="z-index: 9999;">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content rounded-4 border-0 shadow-lg">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-5 pt-2">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <img src="<?php echo $service['img']; ?>" class="img-fluid rounded-4 shadow" alt="<?php echo $service['title']; ?>">
+                            </div>
+                            <div class="col-md-6">
+                                <span class="badge bg-primary-subtle text-primary rounded-pill mb-2 px-3 py-2"><?php echo $safe_specialty; ?> Procedure</span>
+                                <h3 class="fw-bold mb-3"><?php echo $service['title']; ?></h3>
+                                <p class="text-muted lead mb-4"><?php echo $service['desc']; ?></p>
+                                <p class="text-muted small mb-4">Our clinic utilizes the latest FDA-approved technology and highly experienced specialists to perform this procedure safely and effectively.</p>
+                                <a href="booking.php" class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm w-100">Schedule Consultation</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -353,7 +393,17 @@ $data = $specialtyData[$specialty];
                     WHERE d.is_active = 1 AND d.specialization = :specialty";
             
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(['specialty' => $specialty]);
+            // Map department name to database specialization title
+            $map = [
+                'Cardiology' => 'Cardiologist',
+                'Neurology' => 'Neurologist',
+                'Pediatrics' => 'Pediatrician',
+                'Dentistry' => 'Dentist',
+                'Orthopedics' => 'Orthopedist',
+                'Optometry' => 'Optometrist'
+            ];
+            $db_specialty = $map[$specialty] ?? $specialty;
+            $stmt->execute(['specialty' => $db_specialty]);
             
             if ($stmt->rowCount() > 0) {
                 while ($row = $stmt->fetch()) {
