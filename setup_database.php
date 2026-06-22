@@ -11,7 +11,7 @@ try {
     echo "Connected to MySQL server successfully.<br>";
 
     // 2. Create Database
-    $dbname = "`doctor_appointment_db`";
+    $dbname = "`doctor_appointment_db_2`";
     $pdo->exec("CREATE DATABASE IF NOT EXISTS $dbname");
     echo "Database '$dbname' created or already exists.<br>";
 

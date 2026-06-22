@@ -46,14 +46,14 @@ include 'includes/header.php';
                 <div class="col-md-6 col-lg-3">
                     <div class="card h-100 border-0 shadow-sm text-center p-3 animate-fade-in">
                         <div class="card-body">
-                            <img src="https://ui-avatars.com/api/?name='.urlencode($row['name']).'&background=0D8ABC&color=fff" class="rounded-circle mb-3 shadow-sm" width="100" height="100">
+                            <img src="'.getDoctorImage($row['id'], $row['name']).'" class="rounded-circle mb-3 shadow-sm" width="100" height="100" style="object-fit: cover;">
                             <h5 class="fw-bold mb-0">Dr. '.htmlspecialchars($row['name']).'</h5>
-                            <small class="text-muted">'.htmlspecialchars($row['qualification']).'</small>
+                            <small class="text-muted">'.htmlspecialchars($row['qualification'] ?? 'Specialist').'</small>
                             <p class="text-primary small fw-bold mt-2 mb-1">'.htmlspecialchars($row['specialization']).'</p>
                             
                             <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
-                                <span><i class="fas fa-briefcase me-1"></i>'.$row['experience'].' Yrs</span>
-                                <span><i class="fas fa-door-open me-1"></i>Room '.$row['room_no'].'</span>
+                                <span><i class="fas fa-briefcase me-1"></i>'.($row['experience'] ?? '5').' Yrs</span>
+                                <span><i class="fas fa-door-open me-1"></i>Room '.($row['room_no'] ?? '101').'</span>
                             </div>
 
                             <p class="fw-bold mb-3">$'.number_format($row['consultation_fee'], 2).' <span class="text-muted fw-normal small">/ Visit</span></p>

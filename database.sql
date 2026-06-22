@@ -1,7 +1,6 @@
 -- Database: doctor_appointment_db
 
-CREATE DATABASE IF NOT EXISTS doctor_appointment_db;
-USE doctor_appointment_db;
+
 
 -- Users Table (Stores Admin, Doctor, Patient login info)
 CREATE TABLE users (
