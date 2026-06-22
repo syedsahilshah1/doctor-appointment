@@ -88,12 +88,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form method="POST" action="">
                     <div class="mb-3">
                         <label class="form-label">Email Address</label>
-                        <input type="email" name="email" class="form-control" required placeholder="john@example.com">
+                        <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
                     </div>
                     
                     <div class="mb-3">
                         <label class="form-label">Password</label>
-                        <input type="password" name="password" class="form-control" required placeholder="******">
+                        <input type="password" id="password" name="password" class="form-control" required placeholder="******">
                     </div>
                     
                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -104,7 +104,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a href="#" class="text-decoration-none text-primary small fw-bold">Forgot Password?</a>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary-custom w-100 py-2">Login</button>
+                    <button type="submit" class="btn btn-primary-custom w-100 py-2 mb-3">Login</button>
+                    
+                    <!-- Demo Quick Login Buttons -->
+                    <div class="border-top pt-3 mt-3">
+                        <p class="text-center text-muted small mb-2">Demo Quick Login</p>
+                        <div class="d-flex gap-2 justify-content-center">
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="fillLogin('admin@admin.com', 'admin123')">
+                                <i class="fas fa-user-shield me-1"></i>Admin
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-info" onclick="fillLogin('smith@hospital.com', 'password123')">
+                                <i class="fas fa-user-md me-1"></i>Doctor
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-success" onclick="fillLogin('patient@example.com', 'patient123')">
+                                <i class="fas fa-user-injured me-1"></i>Patient
+                            </button>
+                        </div>
+                    </div>
                     
                     <div class="text-center mt-4">
                         <small>Don't have an account? <a href="register.php" class="text-primary fw-bold text-decoration-none">Sign Up</a></small>
@@ -115,5 +131,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 
+<script>
+function fillLogin(email, password) {
+    document.getElementById('email').value = email;
+    document.getElementById('password').value = password;
+}
+</script>
 </body>
 </html>

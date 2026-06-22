@@ -11,59 +11,85 @@ $specialtyData = [
     'Dentistry' => [
         'hero_title' => 'Advanced Dental & Oral Care',
         'hero_desc' => 'Experience world-class dentistry with state-of-the-art 3D technology and painless procedures.',
-        'hero_img' => 'https://img.freepik.com/free-photo/dentist-working-with-patient-clinic_1303-26462.jpg?w=1200',
+        'hero_img' => 'assets/images/3d_tooth.png',
         'about_title' => 'Revolutionizing Dental Care',
-        'about' => 'Our Dentistry center operates like a specialized hospital within a hospital. We use advanced 3D scanning, CAD/CAM technology, and robotic assistance to ensure precision in every procedure. From a simple cleaning to full-mouth reconstruction, your smile is in the hands of global experts.',
+        'about' => 'Our Dentistry center operates like a specialized hospital within a hospital. We use advanced 3D scanning, CAD/CAM technology, and robotic assistance to ensure precision in every procedure.',
         'services' => [
-            ['title' => '3D Dental Implants', 'desc' => 'Permanent, natural-looking tooth replacement using guided 3D surgery.', 'img' => 'assets/images/dental_implant.png'],
-            ['title' => 'Root Canal Therapy', 'desc' => 'Microscope-assisted, painless endodontic treatments.', 'img' => 'assets/images/root_canal.png'],
-            ['title' => 'Cosmetic Dentistry', 'desc' => 'Laser whitening, veneers, and smile makeovers.', 'img' => 'assets/images/cosmetic_teeth.png'],
-            ['title' => 'Orthodontics', 'desc' => 'Invisible aligners and advanced braces for all ages.', 'img' => 'assets/images/orthodontics.png'],
-            ['title' => 'Pediatric Dentistry', 'desc' => 'Child-friendly care to build lifelong healthy habits.', 'img' => 'assets/images/pediatric_tooth.png']
+            ['title' => '3D Dental Implants', 'desc' => 'Permanent, natural-looking tooth replacement.', 'img' => 'assets/images/dental_implant.png', 'filter' => ''],
+            ['title' => 'Root Canal Therapy', 'desc' => 'Microscope-assisted, painless treatments.', 'img' => 'assets/images/root_canal.png', 'filter' => ''],
+            ['title' => 'Cosmetic Dentistry', 'desc' => 'Laser whitening, veneers, and smile makeovers.', 'img' => 'assets/images/cosmetic_teeth.png', 'filter' => ''],
+            ['title' => 'Orthodontics', 'desc' => 'Invisible aligners and advanced braces.', 'img' => 'assets/images/orthodontics.png', 'filter' => ''],
+            ['title' => 'Pediatric Dentistry', 'desc' => 'Child-friendly care.', 'img' => 'assets/images/3d_tooth.png', 'filter' => 'hue-rotate(45deg)']
         ]
     ],
     'Cardiology' => [
         'hero_title' => 'Heart Institute & Cardiovascular Care',
         'hero_desc' => 'Pioneering cardiac treatments with unmatched precision and dedicated 24/7 emergency heart care.',
-        'hero_img' => 'https://img.freepik.com/free-photo/doctors-surgeons-performing-surgery-operating-room_1303-20092.jpg?w=1200',
+        'hero_img' => 'assets/images/3d_heart.png',
         'about_title' => 'Your Heart in the Best Hands',
-        'about' => 'The Cardiology department is a fully equipped center offering everything from preventative screenings to complex bypass surgeries. We utilize 3D heart mapping and minimally invasive techniques to ensure rapid recovery and exceptional outcomes.',
+        'about' => 'The Cardiology department is a fully equipped center offering everything from preventative screenings to complex bypass surgeries. We utilize 3D heart mapping and minimally invasive techniques.',
         'services' => [
-            ['title' => '3D Echocardiography', 'desc' => 'Advanced 3D imaging of the heart to detect anomalies.', 'img' => 'https://img.freepik.com/free-photo/3d-heart-model-medical-concept_23-2150424591.jpg?w=600'],
-            ['title' => 'Interventional Cardiology', 'desc' => 'Angioplasty and stenting using cutting-edge tech.', 'img' => 'https://img.freepik.com/free-photo/surgeon-operating-room_1303-20094.jpg?w=600'],
-            ['title' => 'Heart Bypass Surgery', 'desc' => 'CABG procedures performed by world-renowned surgeons.', 'img' => 'https://img.freepik.com/free-photo/medical-team-performing-surgical-operation_1303-26159.jpg?w=600'],
-            ['title' => 'Electrophysiology', 'desc' => 'Treatment for arrhythmias and pacemaker implantation.', 'img' => 'https://img.freepik.com/free-photo/heart-rate-monitor-hospital_1303-19967.jpg?w=600']
+            ['title' => '3D Echocardiography', 'desc' => 'Advanced 3D imaging of the heart.', 'img' => 'assets/images/3d_heart.png', 'filter' => ''],
+            ['title' => 'Interventional Cardiology', 'desc' => 'Angioplasty and stenting using cutting-edge tech.', 'img' => 'assets/images/3d_heart.png', 'filter' => 'hue-rotate(90deg)'],
+            ['title' => 'Heart Bypass Surgery', 'desc' => 'CABG procedures performed by world-renowned surgeons.', 'img' => 'assets/images/3d_heart.png', 'filter' => 'hue-rotate(180deg)'],
+            ['title' => 'Electrophysiology', 'desc' => 'Treatment for arrhythmias and pacemakers.', 'img' => 'assets/images/3d_heart.png', 'filter' => 'hue-rotate(270deg)']
         ]
     ],
     'Neurology' => [
         'hero_title' => 'Advanced Brain & Spine Center',
         'hero_desc' => 'Comprehensive neurological care leveraging 3D brain mapping and innovative therapies.',
-        'hero_img' => 'https://img.freepik.com/free-photo/doctor-looking-mri-scan_1303-24151.jpg?w=1200',
+        'hero_img' => 'assets/images/3d_brain.png',
         'about_title' => 'Unlocking the Mysteries of the Brain',
-        'about' => 'Our Neurology center provides world-class care for brain, spinal cord, and nerve disorders. We use advanced neuroimaging, 3D functional brain mapping, and dedicated stroke units to provide life-saving treatments.',
+        'about' => 'Our Neurology center provides world-class care for brain, spinal cord, and nerve disorders. We use advanced neuroimaging and dedicated stroke units to provide life-saving treatments.',
         'services' => [
-            ['title' => '3D Brain Mapping', 'desc' => 'Precise 3D visualization of brain activity and structures.', 'img' => 'https://img.freepik.com/free-photo/3d-glowing-brain-medical-concept_23-2150424602.jpg?w=600'],
-            ['title' => 'Stroke Management', 'desc' => 'Rapid response units dedicated to stroke reversal.', 'img' => 'https://img.freepik.com/free-photo/doctor-holding-brain-scan_1303-24150.jpg?w=600'],
-            ['title' => 'Neurosurgery', 'desc' => 'Minimally invasive spine and brain surgeries.', 'img' => 'https://img.freepik.com/free-photo/surgeons-operating-patient-hospital_1303-20093.jpg?w=600'],
-            ['title' => 'Epilepsy Center', 'desc' => 'Advanced diagnostics and treatment plans for seizures.', 'img' => 'https://img.freepik.com/free-photo/neurologist-examining-patient_1303-24152.jpg?w=600']
+            ['title' => '3D Brain Mapping', 'desc' => 'Precise 3D visualization of brain activity.', 'img' => 'assets/images/3d_brain.png', 'filter' => ''],
+            ['title' => 'Stroke Management', 'desc' => 'Rapid response units dedicated to stroke reversal.', 'img' => 'assets/images/3d_brain.png', 'filter' => 'hue-rotate(120deg)'],
+            ['title' => 'Neurosurgery', 'desc' => 'Minimally invasive spine and brain surgeries.', 'img' => 'assets/images/3d_brain.png', 'filter' => 'hue-rotate(240deg)'],
+            ['title' => 'Epilepsy Center', 'desc' => 'Advanced diagnostics and treatment plans.', 'img' => 'assets/images/3d_brain.png', 'filter' => 'hue-rotate(50deg)']
         ]
     ],
     'Orthopedics' => [
-        'hero_title' => 'Institute of Orthopedics & Joint Replacement',
+        'hero_title' => 'Institute of Orthopedics',
         'hero_desc' => 'Regain your mobility with advanced 3D joint replacements and sports medicine.',
-        'hero_img' => 'https://img.freepik.com/free-photo/male-doctor-examining-patient-s-knee_1303-23118.jpg?w=1200',
+        'hero_img' => 'assets/images/3d_bone.png',
         'about_title' => 'Moving Forward Without Pain',
-        'about' => 'Our Orthopedics division is a standalone powerhouse for musculoskeletal care. From 3D-printed custom joint replacements to elite sports injury rehabilitation, we ensure you get back to your active lifestyle quickly and safely.',
+        'about' => 'Our Orthopedics division is a standalone powerhouse. From 3D-printed custom joint replacements to elite sports injury rehabilitation, we ensure you get back to your active lifestyle.',
         'services' => [
-            ['title' => '3D Joint Replacement', 'desc' => 'Custom-fit 3D printed knees and hips for perfect alignment.', 'img' => 'https://img.freepik.com/free-photo/3d-bone-joint-medical-illustration_23-2150424610.jpg?w=600'],
-            ['title' => 'Sports Medicine', 'desc' => 'Advanced arthroscopy and ligament repairs.', 'img' => 'https://img.freepik.com/free-photo/physiotherapist-doing-leg-exercises-with-patient_1170-2051.jpg?w=600'],
-            ['title' => 'Spine Surgery', 'desc' => 'Correction of scoliosis and herniated discs.', 'img' => 'https://img.freepik.com/free-photo/doctor-examining-spine-xray_1303-23119.jpg?w=600'],
-            ['title' => 'Trauma Care', 'desc' => '24/7 dedicated orthopedic trauma surgery team.', 'img' => 'https://img.freepik.com/free-photo/patient-with-broken-leg-hospital_1303-23120.jpg?w=600']
+            ['title' => '3D Joint Replacement', 'desc' => 'Custom-fit 3D printed knees and hips.', 'img' => 'assets/images/3d_bone.png', 'filter' => ''],
+            ['title' => 'Sports Medicine', 'desc' => 'Advanced arthroscopy and ligament repairs.', 'img' => 'assets/images/3d_bone.png', 'filter' => 'hue-rotate(60deg)'],
+            ['title' => 'Spine Surgery', 'desc' => 'Correction of scoliosis and herniated discs.', 'img' => 'assets/images/3d_bone.png', 'filter' => 'hue-rotate(150deg)'],
+            ['title' => 'Trauma Care', 'desc' => '24/7 dedicated orthopedic trauma surgery team.', 'img' => 'assets/images/3d_bone.png', 'filter' => 'hue-rotate(220deg)']
+        ]
+    ],
+    'Pediatrics' => [
+        'hero_title' => 'Children\'s Care Center',
+        'hero_desc' => 'Gentle, expert medical care for infants, children, and adolescents.',
+        'hero_img' => 'assets/images/3d_baby.png',
+        'about_title' => 'Caring for Your Little Ones',
+        'about' => 'Our Pediatric department is designed to be child-friendly, providing advanced 3D diagnostics and treatments in a comforting environment.',
+        'services' => [
+            ['title' => 'Neonatal Care', 'desc' => 'Specialized intensive care for newborns.', 'img' => 'assets/images/3d_baby.png', 'filter' => ''],
+            ['title' => 'Immunizations', 'desc' => 'Complete vaccination schedules.', 'img' => 'assets/images/3d_baby.png', 'filter' => 'hue-rotate(90deg)'],
+            ['title' => 'Child Psychology', 'desc' => 'Support for mental and emotional well-being.', 'img' => 'assets/images/3d_baby.png', 'filter' => 'hue-rotate(180deg)'],
+            ['title' => 'Pediatric Surgery', 'desc' => 'Minimally invasive procedures for children.', 'img' => 'assets/images/3d_baby.png', 'filter' => 'hue-rotate(270deg)']
+        ]
+    ],
+    'Optometry' => [
+        'hero_title' => 'Advanced Eye Care Center',
+        'hero_desc' => 'Protecting and restoring your vision with 3D laser technology.',
+        'hero_img' => 'assets/images/3d_eye.png',
+        'about_title' => 'See the World Clearly',
+        'about' => 'We offer comprehensive eye exams, 3D laser vision correction, and treatments for complex retinal diseases.',
+        'services' => [
+            ['title' => '3D LASIK Surgery', 'desc' => 'Blade-free 3D laser vision correction.', 'img' => 'assets/images/3d_eye.png', 'filter' => ''],
+            ['title' => 'Cataract Surgery', 'desc' => 'Advanced intraocular lens implants.', 'img' => 'assets/images/3d_eye.png', 'filter' => 'hue-rotate(80deg)'],
+            ['title' => 'Glaucoma Treatment', 'desc' => 'Early detection and pressure management.', 'img' => 'assets/images/3d_eye.png', 'filter' => 'hue-rotate(160deg)'],
+            ['title' => 'Retinal Care', 'desc' => 'Treatment for macular degeneration.', 'img' => 'assets/images/3d_eye.png', 'filter' => 'hue-rotate(250deg)']
         ]
     ]
 ];
 
-// Fallback for specialties not explicitly defined above
+// Fallback is no longer heavily needed since all 6 are defined, but kept for safety.
 if (!isset($specialtyData[$specialty])) {
     $specialtyData[$specialty] = [
         'hero_title' => $safe_specialty . ' Center of Excellence',
@@ -168,6 +194,11 @@ $data = $specialtyData[$specialty];
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     transition: all 0.5s ease;
+    border-radius: 50%; /* Remove square border and make circular */
+    width: 180px;
+    height: 180px;
+    margin: 20px auto 0;
+    display: block;
 }
 .card-3d:hover .card-3d-img {
     filter: brightness(1.1);
@@ -250,8 +281,8 @@ $data = $specialtyData[$specialty];
         <?php foreach($data['services'] as $index => $service): ?>
         <div class="card-3d" data-bs-toggle="modal" data-bs-target="#serviceModal<?php echo $index; ?>">
             <div class="card-3d-inner">
-                <img src="<?php echo $service['img']; ?>" class="card-3d-img" alt="<?php echo $service['title']; ?>">
-                <div class="card-3d-body">
+                <img src="<?php echo $service['img']; ?>" class="card-3d-img shadow-sm" style="filter: <?php echo $service['filter'] ?? ''; ?>;" alt="<?php echo $service['title']; ?>">
+                <div class="card-3d-body text-center">
                     <h5 class="fw-bold text-primary mb-3"><?php echo $service['title']; ?></h5>
                     <p class="text-muted"><?php echo $service['desc']; ?></p>
                     <span class="text-decoration-none fw-bold text-dark mt-auto d-inline-block">Learn more <i class="fas fa-arrow-right ms-1 text-primary"></i></span>

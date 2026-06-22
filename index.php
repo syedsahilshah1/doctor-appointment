@@ -91,30 +91,42 @@ include 'includes/header.php';
         
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="feature-card text-center p-4">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-md"></i>
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner text-center p-4">
+                        <div class="specialty-card-content">
+                            <div class="feature-icon mb-3 text-primary">
+                                <i class="fas fa-user-md fa-3x"></i>
+                            </div>
+                            <h4>Expert Doctors</h4>
+                            <p class="text-muted">Access to highly qualified doctors across various specializations.</p>
+                        </div>
                     </div>
-                    <h4>Expert Doctors</h4>
-                    <p class="text-muted">Access to highly qualified doctors across various specializations.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-card text-center p-4">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-check"></i>
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner text-center p-4">
+                        <div class="specialty-card-content">
+                            <div class="feature-icon mb-3 text-primary">
+                                <i class="fas fa-calendar-check fa-3x"></i>
+                            </div>
+                            <h4>Easy Booking</h4>
+                            <p class="text-muted">Book your appointment in just a few clicks. No more waiting in lines.</p>
+                        </div>
                     </div>
-                    <h4>Easy Booking</h4>
-                    <p class="text-muted">Book your appointment in just a few clicks. No more waiting in lines.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-card text-center p-4">
-                    <div class="feature-icon">
-                        <i class="fas fa-notes-medical"></i>
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner text-center p-4">
+                        <div class="specialty-card-content">
+                            <div class="feature-icon mb-3 text-primary">
+                                <i class="fas fa-notes-medical fa-3x"></i>
+                            </div>
+                            <h4>Digital Reports</h4>
+                            <p class="text-muted">Access all your medical history and reports securely from anywhere.</p>
+                        </div>
                     </div>
-                    <h4>Digital Reports</h4>
-                    <p class="text-muted">Access all your medical history and reports securely from anywhere.</p>
                 </div>
             </div>
         </div>
@@ -130,30 +142,42 @@ include 'includes/header.php';
         </div>
         <div class="row text-center g-4">
             <div class="col-md-4">
-                <div class="p-4">
-                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow" style="width: 80px; height: 80px; font-size: 32px;">
-                        1
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner p-4">
+                        <div class="specialty-card-content">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow" style="width: 80px; height: 80px; font-size: 32px;">
+                                1
+                            </div>
+                            <h4 class="fw-bold">Find a Doctor</h4>
+                            <p class="text-muted">Search for a doctor by name or specialization and view their profile.</p>
+                        </div>
                     </div>
-                    <h4 class="fw-bold">Find a Doctor</h4>
-                    <p class="text-muted">Search for a doctor by name or specialization and view their profile.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="p-4">
-                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow" style="width: 80px; height: 80px; font-size: 32px;">
-                        2
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner p-4">
+                        <div class="specialty-card-content">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow" style="width: 80px; height: 80px; font-size: 32px;">
+                                2
+                            </div>
+                            <h4 class="fw-bold">Choose a Time</h4>
+                            <p class="text-muted">Select an available date and time slot from the doctor's schedule.</p>
+                        </div>
                     </div>
-                    <h4 class="fw-bold">Choose a Time</h4>
-                    <p class="text-muted">Select an available date and time slot from the doctor's schedule.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="p-4">
-                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow" style="width: 80px; height: 80px; font-size: 32px;">
-                        3
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner p-4">
+                        <div class="specialty-card-content">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow" style="width: 80px; height: 80px; font-size: 32px;">
+                                3
+                            </div>
+                            <h4 class="fw-bold">Book Appointment</h4>
+                            <p class="text-muted">Confirm your booking and receive a digital appointment receipt instantly.</p>
+                        </div>
                     </div>
-                    <h4 class="fw-bold">Book Appointment</h4>
-                    <p class="text-muted">Confirm your booking and receive a digital appointment receipt instantly.</p>
                 </div>
             </div>
         </div>
@@ -341,20 +365,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 while ($row = $stmt->fetch()) {
                     echo '
                     <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm text-center p-3 animate-fade-in">
-                            <div class="card-body">
-                                <img src="'.getDoctorImage($row['id'], $row['name']).'" class="rounded-circle mb-3 shadow-sm" width="100" height="100" style="object-fit: cover;">
-                                <h5 class="fw-bold mb-0">Dr. '.htmlspecialchars($row['name']).'</h5>
-                                <small class="text-muted">'.htmlspecialchars($row['qualification'] ?? 'Specialist').'</small>
-                                <p class="text-primary small fw-bold mt-2 mb-1">'.htmlspecialchars($row['specialization']).'</p>
-                                
-                                <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
-                                    <span><i class="fas fa-briefcase me-1"></i>'.($row['experience'] ?? '5').' Yrs</span>
-                                    <span><i class="fas fa-door-open me-1"></i>Room '.($row['room_no'] ?? '101').'</span>
+                        <div class="specialty-card-3d h-100">
+                            <div class="specialty-card-inner text-center p-3 animate-fade-in">
+                                <div class="specialty-card-content">
+                                    <img src="'.getDoctorImage($row['id'], $row['name']).'" class="rounded-circle mb-3 shadow-sm" width="100" height="100" style="object-fit: cover;">
+                                    <h5 class="fw-bold mb-0">Dr. '.htmlspecialchars($row['name']).'</h5>
+                                    <small class="text-muted">'.htmlspecialchars($row['qualification'] ?? 'Specialist').'</small>
+                                    <p class="text-primary small fw-bold mt-2 mb-1">'.htmlspecialchars($row['specialization']).'</p>
+                                    
+                                    <div class="d-flex justify-content-center gap-3 mb-3 text-muted small">
+                                        <span><i class="fas fa-briefcase me-1"></i>'.($row['experience'] ?? '5').' Yrs</span>
+                                        <span><i class="fas fa-door-open me-1"></i>Room '.($row['room_no'] ?? '101').'</span>
+                                    </div>
+                                    <p class="fw-bold mb-3">$'.number_format($row['consultation_fee'], 2).' <span class="text-muted fw-normal small">/ Visit</span></p>
+                                    <a href="booking.php?doctor_id='.$row['id'].'" class="btn btn-outline-primary w-100 rounded-pill">Book Appointment</a>
                                 </div>
-
-                                <p class="fw-bold mb-3">$'.number_format($row['consultation_fee'], 2).' <span class="text-muted fw-normal small">/ Visit</span></p>
-                                <a href="booking.php?doctor_id='.$row['id'].'" class="btn btn-outline-primary w-100 rounded-pill">Book Appointment</a>
                             </div>
                         </div>
                     </div>';
@@ -379,46 +404,58 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4">
-                    <div class="d-flex text-warning mb-3">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="fst-italic text-muted mb-4">"DocCare made it incredibly easy for me to find a cardiologist and book an appointment the very next day. Highly recommended!"</p>
-                    <div class="d-flex align-items-center mt-auto">
-                        <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle me-3" width="50" height="50">
-                        <div>
-                            <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
-                            <small class="text-muted">Patient</small>
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner p-4 text-start">
+                        <div class="specialty-card-content h-100 d-flex flex-column">
+                            <div class="d-flex text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="fst-italic text-muted mb-4">"DocCare made it incredibly easy for me to find a cardiologist and book an appointment the very next day. Highly recommended!"</p>
+                            <div class="d-flex align-items-center mt-auto">
+                                <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
+                                    <small class="text-muted">Patient</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4">
-                    <div class="d-flex text-warning mb-3">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="fst-italic text-muted mb-4">"The digital prescription feature is a lifesaver. I never have to worry about losing my paper prescriptions again."</p>
-                    <div class="d-flex align-items-center mt-auto">
-                        <img src="https://randomuser.me/api/portraits/men/22.jpg" class="rounded-circle me-3" width="50" height="50">
-                        <div>
-                            <h6 class="mb-0 fw-bold">Mark Thompson</h6>
-                            <small class="text-muted">Patient</small>
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner p-4 text-start">
+                        <div class="specialty-card-content h-100 d-flex flex-column">
+                            <div class="d-flex text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="fst-italic text-muted mb-4">"The digital prescription feature is a lifesaver. I never have to worry about losing my paper prescriptions again."</p>
+                            <div class="d-flex align-items-center mt-auto">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Mark Thompson</h6>
+                                    <small class="text-muted">Patient</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4">
-                    <div class="d-flex text-warning mb-3">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="fst-italic text-muted mb-4">"Great platform! The doctors are very professional and the appointment process is smooth and completely transparent."</p>
-                    <div class="d-flex align-items-center mt-auto">
-                        <img src="https://randomuser.me/api/portraits/women/33.jpg" class="rounded-circle me-3" width="50" height="50">
-                        <div>
-                            <h6 class="mb-0 fw-bold">Emily Roberts</h6>
-                            <small class="text-muted">Patient</small>
+                <div class="specialty-card-3d h-100">
+                    <div class="specialty-card-inner p-4 text-start">
+                        <div class="specialty-card-content h-100 d-flex flex-column">
+                            <div class="d-flex text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="fst-italic text-muted mb-4">"Great platform! The doctors are very professional and the appointment process is smooth and completely transparent."</p>
+                            <div class="d-flex align-items-center mt-auto">
+                                <img src="https://randomuser.me/api/portraits/women/33.jpg" class="rounded-circle me-3" width="50" height="50">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Emily Roberts</h6>
+                                    <small class="text-muted">Patient</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
