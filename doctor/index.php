@@ -12,6 +12,8 @@ $stmt = $pdo->prepare("SELECT id FROM doctors WHERE user_id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $doctor_id = $stmt->fetchColumn();
 
+
+
 // Fetch Stats
 $total_app = $pdo->prepare("SELECT COUNT(*) FROM appointments WHERE doctor_id = ?");
 $total_app->execute([$doctor_id]);

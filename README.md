@@ -5,9 +5,11 @@ A premium, fully functional **Doctor Appointment Web Application** built with **
 ![DocCare Preview](assets/images/preview.png)
 *(Note: Add a screenshot of your landing page here)*
 
+
 ---
 
 ## ✨ Features
+
 
 ### 👤 Public Area
 *   **Modern Landing Page**: Glassmorphism UI with animations.

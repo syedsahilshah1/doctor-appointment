@@ -25,8 +25,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="index.php">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active text-primary fw-bold' : ''; ?>" href="index.php">Dashboard</a></li>
                 <li class="nav-item"><a class="nav-link" href="../doctors.php">Find Doctor</a></li>
+                <li class="nav-item"><a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'profile.php' ? 'active text-primary fw-bold' : ''; ?>" href="profile.php">My Profile</a></li>
             </ul>
             <div class="d-flex align-items-center">
                  <span class="me-3 fw-bold">Hello, <?php echo $_SESSION['user_name']; ?></span>

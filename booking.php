@@ -97,10 +97,10 @@ include 'includes/header.php';
                 <div class="card-body p-4">
                     
                     <div class="d-flex align-items-center mb-4 p-3 bg-light rounded">
-                        <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($doctor['name']); ?>" class="rounded-circle me-3" width="60">
+                        <img src="<?php echo getDoctorImage($doctor['id'], $doctor['name']); ?>" class="rounded-circle me-3" width="60" height="60" style="object-fit: cover;">
                         <div>
                             <h5 class="mb-0 fw-bold">Dr. <?php echo htmlspecialchars($doctor['name']); ?></h5>
-                            <small class="text-muted"><?php echo htmlspecialchars($doctor['qualification']); ?></small>
+                            <small class="text-muted"><?php echo htmlspecialchars($doctor['qualification'] ?? 'Specialist'); ?></small>
                             <p class="mb-0 text-primary small fw-bold"><?php echo htmlspecialchars($doctor['specialization']); ?></p>
                         </div>
                         <div class="ms-auto text-end">

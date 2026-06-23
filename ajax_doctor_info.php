@@ -7,6 +7,7 @@ $stmt = $pdo->prepare("SELECT day_of_week, start_time, end_time FROM schedules W
 $stmt->execute([$doc_id]);
 $schedules = $stmt->fetchAll();
 
+
 // Get Total Slots (Estimate per day) & Booked today
 $today = date('Y-m-d');
 $stmt = $pdo->prepare("SELECT COUNT(*) FROM appointments WHERE doctor_id = ? AND appointment_date = ? AND status != 'cancelled'");

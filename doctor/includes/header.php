@@ -61,6 +61,11 @@
                 <i class="fas fa-clock"></i> My Schedule
             </a>
         </li>
+        <li>
+            <a href="profile.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'profile.php' ? 'active' : ''; ?>">
+                <i class="fas fa-user-circle"></i> My Profile
+            </a>
+        </li>
     </ul>
     
     <div class="mt-auto p-4 border-top">
