@@ -1,6 +1,7 @@
 <?php
 include 'config/db.php';
 
+
 if (!isset($_GET['doctor_id']) || !isset($_GET['date'])) {
     exit;
 }
